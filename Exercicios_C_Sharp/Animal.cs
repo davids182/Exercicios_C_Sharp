@@ -6,26 +6,58 @@ using System.Threading.Tasks;
 
 namespace Exercicios_C_Sharp
 {
-    class Animal
+    public class Animal
     {
-        protected string dono; //dono do animal
-        protected int natureza; // se selvagem ou doméstico
-        string tipo; // cahchorro ou gato ou peixe ou etc
-        string raca; // raça do animal
+        public string nome; // raça do animal
+        public string tipo; //dono do animal
+       
 
-        public string getDono()
+        public string getTipo()
         {
 
-            return this.dono;
+            return this.tipo;
 
         }
 
-        public void setDono(string agencia)
+        public void setTipo(string tipo)
         {
 
-            this.agencia = agencia;
+            this.tipo = tipo;
 
         }
 
+                  
+        public string getNome()
+        {
+
+            return this.nome;
+
+        }
+
+        public void setNome(string nome)
+        {
+
+            this.nome = nome;
+
+        }
+
+        public string validaTipo(string tipo)
+        {
+
+            if (this.tipo == "cachorro" || this.tipo == "gato" || this.tipo == "peixe")
+            {
+               return  this.tipo = tipo;
+            }else
+            { 
+              return  this.tipo = "peixe";
+            }
+
+        }
+
+       
+
+       
+
+       
     }
 }

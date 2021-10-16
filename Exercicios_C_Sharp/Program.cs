@@ -128,19 +128,119 @@ namespace Exercicios_C_Sharp
 
                         break;
 
-                    case 4: //ANIMAIS DE ESTIMAÇÃO
+                    case 5: //ANIMAIS DE ESTIMAÇÃO
 
-                        string animal1,
-                               animal2,
-                               animal3, 
-                               animal4, 
-                               animal5;
-
-
+                        
+                                    
                         Console.WriteLine("############# - Animais de estimação - #############");
-                        Console.WriteLine("Digite 5 animais de estimação");
+                       
+
+                        Animal animal1 = new Animal();
+
+                        Console.WriteLine("Animal nº1");
+
+                        Console.WriteLine("Nome: ");
+                        animal1.nome = Console.ReadLine();
+
+                        Console.WriteLine("Tipo: ");
+                        animal1.tipo = Console.ReadLine();
+
+                        
+                        animal1.validaTipo(animal1.tipo);
+
+                                              
+                        Animal animal2 = new Animal();
+                        Console.WriteLine("Animal nº2");
+
+                        Console.WriteLine("Nome: ");
+                        animal2.nome = Console.ReadLine();
+
+                        Console.WriteLine("Tipo: ");
+                        animal2.tipo = Console.ReadLine();
 
 
+                        animal2.validaTipo(animal2.tipo);
+
+                       
+
+                        Animal animal3 = new Animal();
+
+                        Console.WriteLine("Animal nº3");
+
+                        Console.WriteLine("Nome: ");
+                        animal3.nome = Console.ReadLine();
+
+                        Console.WriteLine("Tipo: ");
+                        animal3.tipo = Console.ReadLine();
+
+
+                        animal3.validaTipo(animal3.tipo);
+
+
+
+                        Animal animal4 = new Animal();
+                        Console.WriteLine("Animal nº4");
+
+                        Console.WriteLine("Nome: ");
+                        animal4.nome = Console.ReadLine();
+
+                        Console.WriteLine("Tipo: ");
+                        animal4.tipo = Console.ReadLine();
+
+
+                        animal4.validaTipo(animal4.tipo);
+
+                     
+                        Animal animal5 = new Animal();
+                        Console.WriteLine("Animal nº5");
+
+                        Console.WriteLine("Nome: ");
+                        animal5.nome = Console.ReadLine();
+
+                        Console.WriteLine("Tipo: ");
+                        animal5.tipo = Console.ReadLine();
+
+
+                        animal5.validaTipo(animal5.tipo);
+
+                    
+
+                       Console.WriteLine("____________________________________________________________________________________________________\n");
+
+                       Console.WriteLine("Tipos registrados: {0}, {1}, {2}, {3}, {4}. ", animal1.getTipo(), animal2.getTipo(), animal3.getTipo(), animal4.getTipo(), animal5.getTipo());
+                       
+                       Console.WriteLine("____________________________________________________________________________________________________\n");
+                       
+                        
+                        // contagem de ocorrencias através de array
+                        string[] array = new string[] { animal1.getTipo(), animal2.getTipo(), animal3.getTipo(), animal4.getTipo(), animal5.getTipo()};
+
+                        int contagemcachorro = 0;
+                        foreach (string cachorro in array)
+                        {
+
+                            if (cachorro == "cachorro") contagemcachorro++;
+
+                        }
+
+                        int contagemgato = 0;
+                        foreach (string gato in array)
+                        {
+
+                            if (gato == "gato") contagemgato++;
+
+                        }
+
+                        int contagempeixe = 0;
+                        foreach (string peixe in array)
+                        {
+                            if (peixe == "peixe") contagempeixe++;
+
+                        }
+
+                        Console.WriteLine("Quantidade de Cachorros {0}, Gatos {1} e Peixes {2}", contagemcachorro, contagemgato, contagempeixe);
+                       
+                        Console.WriteLine("____________________________________________________________________________________________________");
                         break;
 
                     // SAIR
