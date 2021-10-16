@@ -47,20 +47,7 @@ namespace Exercicios_C_Sharp
 
                         Console.WriteLine("Seu IMC = {0}", imc);
 
-                        if (imc < 20)
-                        {
-                            Console.WriteLine("Você está abaixo do peso!! Procure melhorar sua saúde");
-
-                        }
-                        else if (imc == 20 && imc <= 25)
-                        {
-
-                            Console.WriteLine("Peso está dentro do ideal!! Mantenha-se assim.");
-
-                        } 
-                        {
-                            Console.WriteLine("Você está acima do peso!! Mantenha-se assim.");
-                        }
+                       
 
                         break;
 
@@ -100,8 +87,6 @@ namespace Exercicios_C_Sharp
                         double n1, n2, n3;
                         double media;
                         
-
-
                         Console.WriteLine("############# - Descubra se você foi aprovado - #############");
                         Console.WriteLine("Digite sua nota da primeira prova: ");
                         n1 = Convert.ToDouble(Console.ReadLine());
@@ -129,12 +114,10 @@ namespace Exercicios_C_Sharp
                         break;
 
                     case 5: //ANIMAIS DE ESTIMAÇÃO
-
-                        
-                                    
+                                                                                    
                         Console.WriteLine("############# - Animais de estimação - #############");
                        
-
+                        //cadsatra animal 1
                         Animal animal1 = new Animal();
 
                         Console.WriteLine("Animal nº1");
@@ -144,11 +127,10 @@ namespace Exercicios_C_Sharp
 
                         Console.WriteLine("Tipo: ");
                         animal1.tipo = Console.ReadLine();
-
-                        
+                                                
                         animal1.validaTipo(animal1.tipo);
 
-                                              
+                        //cadastra animal 2                   
                         Animal animal2 = new Animal();
                         Console.WriteLine("Animal nº2");
 
@@ -158,11 +140,10 @@ namespace Exercicios_C_Sharp
                         Console.WriteLine("Tipo: ");
                         animal2.tipo = Console.ReadLine();
 
-
                         animal2.validaTipo(animal2.tipo);
 
                        
-
+                        //cadastra animal 3
                         Animal animal3 = new Animal();
 
                         Console.WriteLine("Animal nº3");
@@ -173,11 +154,10 @@ namespace Exercicios_C_Sharp
                         Console.WriteLine("Tipo: ");
                         animal3.tipo = Console.ReadLine();
 
-
                         animal3.validaTipo(animal3.tipo);
 
 
-
+                        //cadastra animal 4
                         Animal animal4 = new Animal();
                         Console.WriteLine("Animal nº4");
 
@@ -186,11 +166,10 @@ namespace Exercicios_C_Sharp
 
                         Console.WriteLine("Tipo: ");
                         animal4.tipo = Console.ReadLine();
-
-
+                        
                         animal4.validaTipo(animal4.tipo);
 
-                     
+                        //cadastrar animal 5
                         Animal animal5 = new Animal();
                         Console.WriteLine("Animal nº5");
 
@@ -200,11 +179,9 @@ namespace Exercicios_C_Sharp
                         Console.WriteLine("Tipo: ");
                         animal5.tipo = Console.ReadLine();
 
-
                         animal5.validaTipo(animal5.tipo);
-
-                    
-
+                         
+                       //exibe registros dos tipos cadastrados
                        Console.WriteLine("____________________________________________________________________________________________________\n");
 
                        Console.WriteLine("Tipos registrados: {0}, {1}, {2}, {3}, {4}. ", animal1.getTipo(), animal2.getTipo(), animal3.getTipo(), animal4.getTipo(), animal5.getTipo());
@@ -266,7 +243,26 @@ namespace Exercicios_C_Sharp
         //calcula imc
         public double Imc(double peso, double altura)
         {
-            return (peso / (altura * altura)) ;
+           
+           double imc = (peso / (altura * altura)) ;
+
+            if (imc < 20)
+            {
+                Console.WriteLine("Você está abaixo do peso!! Procure melhorar sua saúde");
+
+            }
+            else if (imc == 20 && imc <= 25)
+            {
+               
+                Console.WriteLine("Peso está dentro do ideal!! Mantenha-se assim.");
+                return imc;
+            }
+            {
+                Console.WriteLine("Você está acima do peso!! Mantenha-se assim.");
+                return imc;
+            }
+
+            
         }
 
         //calcula salario
@@ -306,21 +302,21 @@ namespace Exercicios_C_Sharp
             rec = Math.Round(rec, 2);
             if (rec >= 5){
 
-                Console.WriteLine("Sua nota final é {0}!!", rec);
+                
                 Console.WriteLine("Você foi APROVADO na segunda chamada!!");
-                return 0;
+                Console.WriteLine("Sua nota final é:");
+                return rec;
             }
             else
             {
-                Console.WriteLine("Sua nota final é {0}!!", rec);
+                
                 Console.WriteLine("Você foi REPROVADO! Estude mais na próxima vez!");
-                return 0;
+                Console.WriteLine("Sua nota final é:");
+                return rec;
             }
 
         }
 
-        //
-
-       
+               
     }
 }
